@@ -69,4 +69,58 @@ for i  in range(7):
 #Continue =>Skip current value
 #Pass => Nothing will change (normal segment will continue)
 
+#Else statment in for loop
+#IT is used to check loop is completed or breaked 
+for i in range (1,10):
+    if i%2 == 0:
+        print("Even is found")
+        break
+else: print ("Loop completed")
+
+#Task to find wheather all data files are CSV
+
+files =["data.csv","data2.csv","data3.pdf","data4.csv"]
+for file in files :
+        if  not (file.endswith(".csv")):
+            print ("Not all files are CSV")
+            break
+else: print ("All data files are CSV")
+
+#Challenge
+files = ["data.csv","data2.csv","data3.pdf","data4.csv","data5.csv"]
+for i in range(len(files)) :
+    for j in range(i+1,len(files)) :
+        if (files[i]==files[j]):
+            print ("Found duplicate value")
+            break
+    else: continue
+    break
+else: print("All files are unique")
+
+files = ["data.csv","data2.csv","data3.pdf","data4.csv","data.csv"]
+for i  in range(1 ,len(files)) :
+    if (files[0]==files[i]):
+       print ("Found duplicate value")
+       break
+else: print("All files are unique")  
+
+#Use case of Nested loop
+#Writing query for tables,columns
+tables =["Customer","name","price","orders"]
+columns =["id","created_date"]
+for t in tables:
+    for c in columns:
+        print(f"Select * from {t} where {c} is null")
+
+#while loop 
+#Challange
+count = 0
+while (count <3):
+    answer = input ("Do you agree (yes/no)")
+    if answer == "yes": 
+       print("Glad we are on the same page")
+       break
+    count +=1    
+else: print("3 Strikes , You are out")
+
 
